@@ -1,0 +1,30 @@
+{
+  "name": "Hockett",
+  "version": "1.0.0",
+  "description": "Hockett services",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Rajeev Jayaswal",
+  "license": "ISC",
+  "dependencies": {
+    "aws-config": "^1.1.3",
+    "aws-sdk": "^2.77.0",
+    "body-parser": "^1.17.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "firebase": "^4.1.3",
+    "ipinfo": "^1.3.7",
+    "mongoose": "^4.10.4",
+    "socket.io": "^2.0.3"
+  },
+  "config": {
+    "title": "Hockett",
+    "DBUri": "mongodb://hockett:hockett@ds135592.mlab.com:35592/hockett",
+    "PORT": 8080,
+    "username": "admin",
+    "password": "admin123"
+  }
+}

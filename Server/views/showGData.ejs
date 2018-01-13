@@ -1,0 +1,39 @@
+<% include ./shared/header %>
+<% if(gData != '') { %>
+	<div class="container">
+	  <h2>Gestures Table</h2>
+	  <p>Data sent from gloves movement</p>            
+	  <table class="table table-bordered">
+	    <thead>
+	      <tr>
+			<th>SNo</th>
+	        <th>ID</th>
+	        <th>Param(finger1:finger2:finger3:finger4:finger4:finger5:PalmUp)</th>
+	        <td>Texts</tx>
+	      </tr>
+	    </thead>
+	    <tbody>
+
+	    <% for(var i=0; i<gData.length; i++) { %>
+	      <tr>
+			<td><%= i %>
+	        <td><%= gData[i].id %></td>
+	        <td><%= gData[i].f1 %>:<%= gData[i].f2 %>:<%= gData[i].f3 %>:<%= gData[i].f4 %>:<%= gData[i].f5 %>:<%= gData[i].palmUp %></td>
+	        <td><%= getText(gData[i]) %></td>
+	      </tr>
+	    <% } %>
+
+	    </tbody>
+	  </table>
+	</div>
+		
+<% } %>
+
+<% include ./shared/footer %>
+
+<%
+function getText(rec){
+	return "" + rec.f1 + rec.f2 + rec.f3 + rec.f4 + rec.f5;
+	//return gestureMap[bits];
+}
+%>
